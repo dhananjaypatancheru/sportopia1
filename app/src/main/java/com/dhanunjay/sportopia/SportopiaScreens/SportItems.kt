@@ -43,12 +43,76 @@ import com.dhanunjay.sportopia.UserProfileActivity
 import com.dhanunjay.sportopia.Modules.AppToolbar
 import com.dhanunjay.sportopia.Modules.NavigationDrawerBody
 import com.dhanunjay.sportopia.Modules.NavigationDrawerHeader
-
 import com.dhanunjay.sportopia.SportopiaData.home.HomeViewModel
+
+
 import kotlinx.coroutines.launch
 
 @Composable
 fun HomeScreen(homeViewModel: HomeViewModel = viewModel()) {
+
+    val scaffoldState = rememberScaffoldState()
+    val coroutineScope = rememberCoroutineScope()
+
+    homeViewModel.getUserData()
+
+    Scaffold(
+        scaffoldState = scaffoldState,
+        topBar = {
+            AppToolbar(toolbarTitle = stringResource(id = R.string.home),
+                logoutButtonClicked = {
+                    homeViewModel.logout()
+                },
+                navigationIconClicked = {
+                    coroutineScope.launch {
+                        scaffoldState.drawerState.open()
+                    }
+                }
+            )
+        },
+        drawerGesturesEnabled = scaffoldState.drawerState.isOpen,
+        drawerContent = {
+            NavigationDrawerHeader(homeViewModel.emailId.value)
+            NavigationDrawerBody(navigationDrawerItems = homeViewModel.navigationItemsList,
+                onNavigationItemClicked = {
+                    Log.d("ComingHere","inside_NavigationItemClicked")
+                    Log.d("ComingHere","${it.itemId} ${it.title}")
+                })
+        }
+
+    ) { paddingValues ->
+
+        Surface(
+            modifier = Modifier
+                .fillMaxSize()
+                .background(Color.White)
+                .padding(paddingValues)
+        )
+        {
+            Column(modifier = Modifier.fillMaxSize()) {
+                Box(
+                    modifier = Modifier
+                        .requiredWidth(width = 360.dp)
+                        .requiredHeight(height = 640.dp)
+                        .background(color = Color.White)
+                )
+                {
+                    val localContext = LocalContext.current
+
+
+
+
+
+
+
+                }
+
+            }
+        }
+    }
+
+
+
 
 
 
