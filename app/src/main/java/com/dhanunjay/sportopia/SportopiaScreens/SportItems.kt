@@ -98,6 +98,84 @@ fun HomeScreen(homeViewModel: HomeViewModel = viewModel()) {
                 )
                 {
                     val localContext = LocalContext.current
+                    Image(
+                        painter = painterResource(id = R.drawable.ck),
+                        contentDescription = "",
+                        modifier = Modifier
+                            .align(alignment = Alignment.TopStart)
+                            .offset(
+                                x = 216.dp,
+                                y = 420.dp
+                            )
+                            .clickable {
+                                localContext.startActivity(
+                                    Intent(localContext, DetailsPageActivity::class.java)
+                                )
+                            }
+                            .requiredWidth(width = 180.dp)
+                            .requiredHeight(height = 200.dp)
+                            .clip(shape = RoundedCornerShape(20.dp))
+                    )
+                    Image(
+                        painter = painterResource(id = R.drawable.cak),
+                        contentDescription = "",
+                        modifier = Modifier
+                            .align(alignment = Alignment.TopStart)
+                            .offset(
+                                x = 21.dp,
+                                y = 55.dp
+                            )
+                            .clickable {
+                                localContext.startActivity(
+                                    Intent(localContext, DetailsPageActivity::class.java)
+                                )
+                            }
+                            .requiredWidth(width = 180.dp)
+                            .requiredHeight(height = 200.dp)
+                            .clip(shape = RoundedCornerShape(15.dp))
+                    )
+                    Image(
+                        painter = painterResource(id = R.drawable.fb),
+                        contentDescription = "",
+                        modifier = Modifier
+                            .align(alignment = Alignment.TopStart)
+                            .offset(
+                                x = 216.dp,
+                                y = 200.dp
+                            )
+                            .clickable {
+                                localContext.startActivity(
+                                    Intent(localContext, DetailsPageActivity::class.java)
+                                )
+                            }
+                            .requiredWidth(width = 180.dp)
+                            .requiredHeight(height = 200.dp)
+                            .clip(shape = RoundedCornerShape(15.dp))
+                    )
+
+
+                    Image(
+                        painter = painterResource(id = R.drawable.sk),
+                        contentDescription = " ",
+                        modifier = Modifier
+                            .align(alignment = Alignment.TopStart)
+                            .offset(
+                                x = 21.dp,
+                                y = 500.dp
+                            )
+                            .clickable {
+                                localContext.startActivity(
+                                    Intent(localContext, DetailsPageActivity::class.java)
+                                )
+                            }
+                            .requiredWidth(width = 180.dp)
+                            .requiredHeight(height = 200.dp)
+                            .clip(shape = RoundedCornerShape(10.dp))
+                    )
+
+
+
+
 
 
                     Image(
