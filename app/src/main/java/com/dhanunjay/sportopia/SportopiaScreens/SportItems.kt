@@ -101,6 +101,27 @@ fun HomeScreen(homeViewModel: HomeViewModel = viewModel()) {
 
 
 
+                    Text(
+                        text = "Equipment ",
+                        color = Color.Black,
+                        style = TextStyle(
+                            fontSize = 28.sp,
+                            fontWeight = FontWeight.Medium
+                        ),
+                        modifier = Modifier
+                            .align(alignment = Alignment.TopStart)
+                            .clickable {
+                                localContext.startActivity(
+                                    Intent(
+                                        localContext,
+                                        UserProfileActivity::class.java
+                                    )
+                                )
+                            }
+                            .offset(
+                                x = 240.dp,
+                                y = 120.dp
+                            ))
 
 
 
