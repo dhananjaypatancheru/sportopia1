@@ -100,6 +100,51 @@ fun HomeScreen(homeViewModel: HomeViewModel = viewModel()) {
                     val localContext = LocalContext.current
 
 
+                    Image(
+                        painter = painterResource(id = R.drawable.crk),
+                        contentDescription = " ",
+                        modifier = Modifier
+                            .align(alignment = Alignment.TopStart)
+                            .offset(
+                                x = 21.dp,
+                                y = 278.dp
+                            )
+                            .clickable {
+                                localContext.startActivity(
+                                    Intent(localContext, DetailsPageActivity::class.java)
+                                )
+                            }
+
+                            .requiredWidth(width = 180.dp)
+                            .requiredHeight(height = 200.dp)
+                    )
+                    Image(
+                        painter = painterResource(id = R.drawable.pr),
+                        contentDescription = " ",
+                        modifier = Modifier
+                            .align(alignment = Alignment.TopStart)
+                            .offset(
+                                x = 350.dp,
+                                y = 20.dp
+                            )
+                            .clickable {
+                                localContext.startActivity(
+                                    Intent(localContext, UserProfileActivity::class.java)
+                                )
+                            }
+                            .requiredSize(size = 42.dp)
+                            .clip(shape = CircleShape)
+                            .border(
+                                border = BorderStroke(0.10000000149011612.dp, Color(0xFFF44336)),
+                                shape = CircleShape
+                            )
+                    )
+
+
+
+
+
+
 
                     Text(
                         text = "Equipment ",
