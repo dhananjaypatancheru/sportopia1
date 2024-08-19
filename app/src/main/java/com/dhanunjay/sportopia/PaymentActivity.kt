@@ -15,6 +15,8 @@ import androidx.compose.material.OutlinedTextField
 import androidx.compose.material.Surface
 import androidx.compose.material.Text
 import androidx.compose.runtime.Composable
+import androidx.compose.runtime.mutableStateOf
+import androidx.compose.runtime.remember
 import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.geometry.Offset
@@ -22,9 +24,11 @@ import androidx.compose.ui.graphics.Brush
 import androidx.compose.ui.graphics.Color
 import androidx.compose.ui.platform.LocalContext
 import androidx.compose.ui.res.painterResource
+import androidx.compose.ui.text.font.FontWeight
 import androidx.compose.ui.tooling.preview.Preview
 import androidx.compose.ui.unit.dp
 import androidx.compose.ui.unit.sp
+import com.dhanunjay.sportopia.ui.Theme.Primary
 
 class PaymentActivity : ComponentActivity() {
     @SuppressLint("SuspiciousIndentation")
@@ -71,27 +75,19 @@ class PaymentActivity : ComponentActivity() {
 
                     // Text Fields
                     MyTextFieldComponent(
-                        labelValue = "Bank Name",
-                        onTextChanged = { /* Handle text change */ },
-                        textColor = Color.Black
+                        labelValue = "Bank Name"
                     )
 
                     MyTextFieldComponent(
-                        labelValue = "Card Number",
-                        onTextChanged = { /* Handle text change */ },
-                        textColor = Color.Black
+                        labelValue = "Card Number"
                     )
 
                     MyTextFieldComponent(
-                        labelValue = "Sort Code",
-                        onTextChanged = { /* Handle text change */ },
-                        textColor = Color.Black
+                        labelValue = "Sort Code"
                     )
 
                     MyTextFieldComponent(
-                        labelValue = "3 digits Cvv Number",
-                        onTextChanged = { /* Handle text change */ },
-                        textColor = Color.Black
+                        labelValue = "3 digits Cvv Number"
                     )
 
                     Spacer(modifier = Modifier.height(20.dp))
@@ -107,7 +103,23 @@ class PaymentActivity : ComponentActivity() {
                         colors = ButtonDefaults.buttonColors(Color.Transparent),
                         shape = RoundedCornerShape(50.dp)
                     ) {
-                        // Add your content inside the button (e.g., Text or Icon)
+                        Box(
+                            modifier = Modifier
+                                .fillMaxWidth()
+                                .heightIn(48.dp)
+                                .background(
+                                    brush = Brush.horizontalGradient(listOf(Primary, Primary)),
+                                    shape = RoundedCornerShape(20.dp)
+                                ),
+                            contentAlignment = Alignment.Center
+                        ) {
+                            Text(
+                                text = "Proceed",
+                                fontSize = 18.sp,
+                                color = Color.Black,
+                                fontWeight = FontWeight.Bold
+                            )
+                        }
                     }
 
                     Box(modifier = Modifier.height(10.dp))
@@ -120,12 +132,16 @@ class PaymentActivity : ComponentActivity() {
 @Composable
 fun MyTextFieldComponent(
     labelValue: String,
-    onTextChanged: (String) -> Unit,
-    textColor: Color
+    textColor: Color = Color.Black
 ) {
+    // Remember the state for the text input
+    val textState = remember { mutableStateOf("") }
+
     OutlinedTextField(
-        value = labelValue,
-        onValueChange = onTextChanged,
+        value = textState.value,
+        onValueChange = {
+            textState.value = it // Update the text state when the text changes
+        },
         label = { Text(text = labelValue, color = textColor) },
         modifier = Modifier.fillMaxWidth(),
         textStyle = androidx.compose.ui.text.TextStyle(color = textColor)
@@ -137,7 +153,7 @@ fun HeadingTextComponent(value: String, fontSize: androidx.compose.ui.unit.TextU
     Text(
         text = value,
         fontSize = fontSize,
-        fontWeight = androidx.compose.ui.text.font.FontWeight.Bold,
+        fontWeight = FontWeight.Bold,
         modifier = Modifier.padding(vertical = 8.dp)
     )
 }
