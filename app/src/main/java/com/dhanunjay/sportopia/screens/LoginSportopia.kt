@@ -1,4 +1,4 @@
-package com.dhanunjay.sportopia.SportopiaScreens
+package com.dhanunjay.sportopia.screens
 
 import androidx.compose.foundation.Image
 import androidx.compose.foundation.background
@@ -15,17 +15,17 @@ import androidx.compose.ui.tooling.preview.Preview
 import androidx.compose.ui.unit.dp
 import androidx.lifecycle.viewmodel.compose.viewModel
 import com.dhanunjay.sportopia.R
-import com.dhanunjay.sportopia.Modules.ButtonComponent
-import com.dhanunjay.sportopia.Modules.ClickableLoginTextComponent
-import com.dhanunjay.sportopia.Modules.DividerTextComponent
-import com.dhanunjay.sportopia.Modules.HeadingTextComponent
-import com.dhanunjay.sportopia.Modules.MyTextFieldComponent
-import com.dhanunjay.sportopia.Modules.PasswordTextFieldComponent
-import com.dhanunjay.sportopia.SportopiaData.LoginViewModel
-import com.dhanunjay.sportopia.SportopiaData.login.LoginUIEvent
-import com.dhanunjay.sportopia.navigationControl.AppRouter
-import com.dhanunjay.sportopia.navigationControl.Screen
-import com.dhanunjay.sportopia.navigationControl.SystemBackButtonHandler
+import com.dhanunjay.sportopia.components.ButtonComponent
+import com.dhanunjay.sportopia.components.ClickableLoginTextComponent
+import com.dhanunjay.sportopia.components.DividerTextComponent
+import com.dhanunjay.sportopia.components.HeadingTextComponent
+import com.dhanunjay.sportopia.components.MyTextFieldComponent
+import com.dhanunjay.sportopia.components.PasswordTextFieldComponent
+import com.dhanunjay.sportopia.data.LoginViewModel
+import com.dhanunjay.sportopia.data.login.LoginUIEvent
+import com.dhanunjay.sportopia.navigation.AppRouter
+import com.dhanunjay.sportopia.navigation.Screen
+import com.dhanunjay.sportopia.navigation.SystemBackButtonHandler
 
 
 @Composable

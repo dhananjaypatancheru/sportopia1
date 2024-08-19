@@ -1,4 +1,4 @@
-package com.dhanunjay.sportopia.ui.Design
+package com.dhanunjay.sportopia.ui.Theme
 
 import androidx.compose.material.Typography
 

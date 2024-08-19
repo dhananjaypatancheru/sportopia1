@@ -1,4 +1,4 @@
-package com.dhanunjay.sportopia.navigationControl
+package com.dhanunjay.sportopia.navigation
 
 import androidx.activity.ComponentActivity
 import androidx.activity.OnBackPressedCallback

@@ -1,4 +1,4 @@
-package com.dhanunjay.sportopia.SportopiaData
+package com.dhanunjay.sportopia.data
 
 import androidx.compose.ui.graphics.vector.ImageVector
 

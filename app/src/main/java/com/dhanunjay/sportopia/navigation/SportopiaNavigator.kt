@@ -1,4 +1,4 @@
-package com.dhanunjay.sportopia.navigationControl
+package com.dhanunjay.sportopia.navigation
 
 import androidx.compose.runtime.MutableState
 import androidx.compose.runtime.mutableStateOf

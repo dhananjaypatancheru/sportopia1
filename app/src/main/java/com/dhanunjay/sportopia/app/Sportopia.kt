@@ -7,13 +7,13 @@ import androidx.compose.runtime.Composable
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.graphics.Color
 import androidx.lifecycle.viewmodel.compose.viewModel
-import com.dhanunjay.sportopia.SportopiaData.home.HomeViewModel
-import com.dhanunjay.sportopia.navigationControl.AppRouter
-import com.dhanunjay.sportopia.navigationControl.Screen
-import com.dhanunjay.sportopia.SportopiaScreens.HomeScreen
-import com.dhanunjay.sportopia.SportopiaScreens.LoginScreen
-import com.dhanunjay.sportopia.SportopiaScreens.SignUpScreen
-import com.dhanunjay.sportopia.SportopiaScreens.TermsAndConditionsScreen
+import com.dhanunjay.sportopia.data.home.HomeViewModel
+import com.dhanunjay.sportopia.navigation.AppRouter
+import com.dhanunjay.sportopia.navigation.Screen
+import com.dhanunjay.sportopia.screens.HomeScreen
+import com.dhanunjay.sportopia.screens.LoginScreen
+import com.dhanunjay.sportopia.screens.SignUpScreen
+import com.dhanunjay.sportopia.screens.TermsAndConditionsScreen
 
 
 @Composable

@@ -1,4 +1,4 @@
-package com.dhanunjay.sportopia.Modules
+package com.dhanunjay.sportopia.components
 
 import android.util.Log
 import androidx.compose.foundation.background
@@ -45,15 +45,15 @@ import androidx.compose.ui.text.withStyle
 import androidx.compose.ui.unit.TextUnit
 import androidx.compose.ui.unit.dp
 import androidx.compose.ui.unit.sp
-import com.dhanunjay.sportopia.SportopiaData.NavigationItem
-import com.dhanunjay.sportopia.ui.Design.AccentColor
-import com.dhanunjay.sportopia.ui.Design.BgColor
-import com.dhanunjay.sportopia.ui.Design.GrayColor
-import com.dhanunjay.sportopia.ui.Design.Primary
-import com.dhanunjay.sportopia.ui.Design.Secondary
-import com.dhanunjay.sportopia.ui.Design.TextColor
-import com.dhanunjay.sportopia.ui.Design.WhiteColor
-import com.dhanunjay.sportopia.ui.Design.componentShapes
+import com.dhanunjay.sportopia.data.NavigationItem
+import com.dhanunjay.sportopia.ui.Theme.AccentColor
+import com.dhanunjay.sportopia.ui.Theme.BgColor
+import com.dhanunjay.sportopia.ui.Theme.GrayColor
+import com.dhanunjay.sportopia.ui.Theme.Primary
+import com.dhanunjay.sportopia.ui.Theme.Secondary
+import com.dhanunjay.sportopia.ui.Theme.TextColor
+import com.dhanunjay.sportopia.ui.Theme.WhiteColor
+import com.dhanunjay.sportopia.ui.Theme.componentShapes
 import com.dhanunjay.sportopia.R
 
 

@@ -1,12 +1,12 @@
-package com.dhanunjay.sportopia.SportopiaData.signup
+package com.dhanunjay.sportopia.data.signup
 
 import androidx.compose.runtime.mutableStateOf
 import androidx.lifecycle.ViewModel
 import com.google.firebase.auth.FirebaseAuth
-import com.dhanunjay.sportopia.SportopiaData.RegistrationUIState
-import com.dhanunjay.sportopia.SportopiaData.rules.Validator
-import com.dhanunjay.sportopia.navigationControl.AppRouter
-import com.dhanunjay.sportopia.navigationControl.Screen
+import com.dhanunjay.sportopia.data.RegistrationUIState
+import com.dhanunjay.sportopia.data.rules.Validator
+import com.dhanunjay.sportopia.navigation.AppRouter
+import com.dhanunjay.sportopia.navigation.Screen
 
 
 class SignupViewModel : ViewModel() {

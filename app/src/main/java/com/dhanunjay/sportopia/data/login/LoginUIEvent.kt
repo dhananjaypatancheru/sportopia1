@@ -1,4 +1,4 @@
-package com.dhanunjay.sportopia.SportopiaData.login
+package com.dhanunjay.sportopia.data.login
 
 sealed class LoginUIEvent{
 

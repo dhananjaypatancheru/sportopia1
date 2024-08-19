@@ -1,4 +1,4 @@
-package com.dhanunjay.sportopia.SportopiaData.home
+package com.dhanunjay.sportopia.data.home
 
 import android.util.Log
 import androidx.compose.material.icons.Icons
@@ -7,9 +7,9 @@ import androidx.compose.material.icons.filled.Settings
 import androidx.lifecycle.MutableLiveData
 import androidx.lifecycle.ViewModel
 import com.google.firebase.auth.FirebaseAuth
-import com.dhanunjay.sportopia.SportopiaData.NavigationItem
-import com.dhanunjay.sportopia.navigationControl.AppRouter
-import com.dhanunjay.sportopia.navigationControl.Screen
+import com.dhanunjay.sportopia.data.NavigationItem
+import com.dhanunjay.sportopia.navigation.AppRouter
+import com.dhanunjay.sportopia.navigation.Screen
 
 class HomeViewModel : ViewModel() {
 

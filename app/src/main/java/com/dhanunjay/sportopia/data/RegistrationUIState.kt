@@ -1,4 +1,4 @@
-package  com.dhanunjay.sportopia.SportopiaData
+package  com.dhanunjay.sportopia.data
 
 data class RegistrationUIState(
     var firstName :String = "",

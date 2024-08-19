@@ -1,4 +1,4 @@
-package com.dhanunjay.sportopia.SportopiaData.rules
+package com.dhanunjay.sportopia.data.rules
 
 object Validator {
 

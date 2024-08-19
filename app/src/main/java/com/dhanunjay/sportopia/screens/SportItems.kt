@@ -1,4 +1,4 @@
-package com.dhanunjay.sportopia.SportopiaScreens
+package com.dhanunjay.sportopia.screens
 
 import android.content.Intent
 import android.util.Log
@@ -40,10 +40,10 @@ import com.dhanunjay.sportopia.DetailsPageActivity
 
 import com.dhanunjay.sportopia.R
 import com.dhanunjay.sportopia.UserProfileActivity
-import com.dhanunjay.sportopia.Modules.AppToolbar
-import com.dhanunjay.sportopia.Modules.NavigationDrawerBody
-import com.dhanunjay.sportopia.Modules.NavigationDrawerHeader
-import com.dhanunjay.sportopia.SportopiaData.home.HomeViewModel
+import com.dhanunjay.sportopia.components.AppToolbar
+import com.dhanunjay.sportopia.components.NavigationDrawerBody
+import com.dhanunjay.sportopia.components.NavigationDrawerHeader
+import com.dhanunjay.sportopia.data.home.HomeViewModel
 
 
 import kotlinx.coroutines.launch
